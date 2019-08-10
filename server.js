@@ -1,8 +1,8 @@
-var http = require("http");
+var http = require('http');
 
-http.createServer(function (request, response){
-	response.writeHead(200, {'Content-Type': 'text/plain'});
-	response.end('Hello World\n');
-}).listen(8888);
-
-console.log('Server running at http://127.0.0.1:8888/');
+http.createServer(function(req, res){
+	res.writeHead(200, {"Content-type": "text/html"});
+	res.write("<h1>Node.js</h1>");
+	res.end("<p>Hello World");
+}).listen(3000);
+console.log("HTTP server is listening at port 6000.");
